@@ -1,13 +1,97 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+.page {
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  display: flex;
+  
+  flex-direction: column;
+  
+  align-items: center;
+  
+  justify-content: center;
+  
+  height: 100vh;
+  
+  background-color: #f2f2f2; /* Example background color */
+  
+  }
+  
+  .Numbers{
+  
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  
+  }
+  
+  .active1{
+  background-image: url(download.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  }
+  
+  .active2{
+  background-image: url(download1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  }
+  
+  .active3{
+  background-image: url(download2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  
+  #p {
+  
+  width: 200px;
+  height: 200px;
+  border: 2px solid #4a90e2; /* Circular border color */
+  color: #4a90e2; /* Number color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  }
+  
+  .message {
+  
+  margin-bottom: 20px;
+  
+  font-size: 24px;
+  
+  color: #333333; /* Example color for text */
+  
+  }
+  
+  .buttons {
+  
+  display: flex;
+  
+  gap: 10px;
+  
+  }
+  
+  button {
+  
+  padding: 10px 20px;
+  
+  border: none;
+  
+  border-radius: 5px;
+  
+  background-color: #76b852; /* Example color for buttons */
+  
+  color: white;
+  
+  font-size: 16px;
+  
+  cursor: pointer;
+  
+  transition: background-color 0.3s;
+  
+  }
+  
+  button:hover {
+  
+  background-color: #5d9f42; /* Darker shade for hover effect */
+  
+  }

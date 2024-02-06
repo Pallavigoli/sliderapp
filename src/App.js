@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from 'react'
+import './index.css'
 function App() {
+  const msg=["Message-ONE","Message-TWO","Message-THREE"]
+  const [pg, setpg] = useState(1)
+    function previous() {
+      if((pg-1)<=0)
+      {
+        setpg(pg)
+      }
+      else{
+     setpg(pg-1)
+      }
+    }
+    function next() {
+      if((pg+1)>=4)
+      {
+        setpg(pg)
+      }
+      else{
+      setpg(pg+1)
+      }
+    }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="page">
+    <div className="Numbers">
+      <div id='p' className={pg==1?"active1":""}></div>
+      <div id='p'className={pg==2?"active2":""}></div>
+      <div id='p'className={pg==3?"active3":""}></div>
     </div>
+
+    <div className="message">
+      {msg[pg-1]}
+    </div>
+
+    <div className="buttons">
+      <button onClick={previous}>Previous</button>
+      <button onClick={next}>Next</button>
+    </div>
+   </div>
   );
 }
 
